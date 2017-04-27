@@ -10,8 +10,20 @@
 
     <type name="Magento\Catalog\Model\Product">
         <plugin
-                name="tutorial_news_priceplugin"
-                type="Tutorial\News\Plugin\PricePlugin"
+                name="tutorial_news_newpriceplugin"
+                type="Tutorial\News\Plugin\NewpricePlugin"
+                disabled="false"/>
+    </type>
+    <type name="Magento\Theme\Block\Html\Footer">
+        <plugin
+                name="tutorial_news_changecopyrightplugin"
+                type="Tutorial\News\Plugin\ChangecopyrightPlugin"
+                disabled="false"/>
+    </type>
+    <type name="Magento\Theme\Block\Html\Breadcrumbs">
+        <plugin
+                name="tutorial_news_changebreadcrumbplugin"
+                type="Tutorial\News\Plugin\ChangebreadcrumbPlugin"
                 disabled="false"/>
     </type>
 </config>

@@ -11,12 +11,11 @@ namespace Tutorial\News\Plugin;
 
 class ChangebreadcrumbPlugin
 {
-    public function afterAddCrumb (\Magento\Theme\Block\Html\Breadcrumbs $subject, $result) {
+    public function beforeAddCrumb(\Magento\Theme\Block\Html\Breadcrumbs $subject, $crumbName, $crumbInfo)
+    {
+        $crumbInfo['label'] = $crumbInfo['label'] . '!!!';
+        $crumbInfo['title'] = $crumbInfo['title'] . '!!!';
 
-        foreach ($this->_crumbs as $key => $value) {
-            $this->_crumbs[$key] = $value . '!!';
-        }
-
-        return $this;
+        return array($crumbName, $crumbInfo);
     }
 }

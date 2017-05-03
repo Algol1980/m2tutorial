@@ -16,13 +16,13 @@
     </type>
     <type name="Magento\Theme\Block\Html\Footer">
         <plugin
-                name="tutorial_news_changecopyrightplugin"
+                name="tutorial_news_copyrightplugin"
                 type="Tutorial\News\Plugin\ChangecopyrightPlugin"
                 disabled="false"/>
     </type>
     <type name="Magento\Theme\Block\Html\Breadcrumbs">
         <plugin
-                name="tutorial_news_changebreadcrumbplugin"
+                name="tutorial_news_crumbplugin"
                 type="Tutorial\News\Plugin\ChangebreadcrumbPlugin"
                 disabled="false"/>
     </type>

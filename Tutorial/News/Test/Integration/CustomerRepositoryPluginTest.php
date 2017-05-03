@@ -43,6 +43,8 @@ class PricePluginTest extends \PHPUnit_Framework_TestCase {
 
         $pluginInfo = $pluginList->get(Magento\Catalog\Model\Product::class, []);
 
+        var_dump($pluginInfo);
+
         $this->assertSame(NewpricePlugin::class, $pluginInfo['tutorial_news_newpriceplugin']['instance']);
     }
 
@@ -57,7 +59,7 @@ class PricePluginTest extends \PHPUnit_Framework_TestCase {
 
         $pluginInfo = $pluginList->get(Magento\Theme\Block\Html\Footer::class, []);
 
-        $this->assertSame(ChangecopyrightPlugin::class, $pluginInfo['tutorial_news_changecopyrightplugin']['instance']);
+        $this->assertSame(ChangecopyrightPlugin::class, $pluginInfo['tutorial_news_copyrightplugin']['instance']);
     }
     public function testChangeBreadcrumbPluginIsRegistered() {
 
@@ -70,6 +72,6 @@ class PricePluginTest extends \PHPUnit_Framework_TestCase {
 
         $pluginInfo = $pluginList->get(Magento\Theme\Block\Html\Breadcrumbs::class, []);
 
-        $this->assertSame(ChangebreadcrumbPlugin::class, $pluginInfo['tutorial_news_changebreadcrumbplugin']['instance']);
+        $this->assertSame(ChangebreadcrumbPlugin::class, $pluginInfo['tutorial_news_crumbplugin']['instance']);
     }
 }
